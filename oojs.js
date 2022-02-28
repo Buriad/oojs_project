@@ -42,7 +42,7 @@ let arrOfFoods = ["zuivan", "budaataihuurga", "buuz", "pizza", "huushuur"];
 
 console.log(arrOfFoods);
 
-//call getAllFoods() then create Food objects and push every Food objects to foods array
+// //call getAllFoods() then create Food objects and push every Food objects to foods array
 
 getAllFood()
   .then((res) => res.json())
@@ -50,18 +50,14 @@ getAllFood()
     console.log(res);
   });
 
-let arr = [
-  { name: "zuivan", cuisine: "mongol" },
-  { name: "budaataihuurga", cuisine: "mongol" },
-  { name: "buuz", cuisine: "mongol" },
-  { name: "pizza", cuisine: "italian" },
-  { name: "huushuur", cuisine: "mongol" },
-];
-
-let arrofFoods = [];
+fetch("https://dev-api.mstars.mn/api/foods")
+  .then((res) => res.json())
+  .then((res) => {
+    console.log(res);
+  });
 
 let arrofFoods = arr.map((e) => {
   return new Food(e.name, e.cuisine);
 });
 
-// //Generate HMTL function
+// // //Generate HMTL function
