@@ -38,10 +38,6 @@ class Food {
 
 //create an array foods
 
-let arrOfFoods = ["zuivan", "budaataihuurga", "buuz", "pizza", "huushuur"];
-
-console.log(arrOfFoods);
-
 // //call getAllFoods() then create Food objects and push every Food objects to foods array
 
 getAllFood()
@@ -53,11 +49,7 @@ getAllFood()
 fetch("https://dev-api.mstars.mn/api/foods")
   .then((res) => res.json())
   .then((res) => {
-    console.log(res);
+    let arrofFoods = res;
   });
-
-let arrofFoods = arr.map((e) => {
-  return new Food(e.name, e.cuisine);
-});
 
 // // //Generate HMTL function
